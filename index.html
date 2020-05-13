@@ -1,19 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <link
       href="https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Fontdiner+Swanky&family=Homemade+Apple&family=Sunshiney&display=swap"
       rel="stylesheet"
@@ -24,6 +16,7 @@
     />
     <title>Beldih Confessions</title>
   </head>
+
   <body
     style="
       background: linear-gradient(
@@ -33,20 +26,14 @@
         #6f362b,
         #9f572b,
         #c2831f,
-        #c59a0d,
-        #c2b200,
-        #b8cb00,
-        #9fcc00,
-        #84cc04,
-        #62cc17,
-        #2fcb28
+        #c59a0d
       );
     "
   >
     <div style="text-align: center;">
       <img
         src="logo.png"
-        style="height: 20%; width: 20%; align-items: center;"
+        style="height: 25%; width: 25%; align-items: center;"
       />
     </div>
     <br />
@@ -57,6 +44,7 @@
         font-family: 'Fontdiner Swanky', cursive;
         color: #ffdf00;
         text-shadow: 3px -2px 5px rgba(255, 0, 0, 1);
+        font-size: 3rem;
       "
     >
       Beldih Confessions
@@ -65,7 +53,7 @@
       style="
         font-family: 'Sunshiney', cursive;
         font-size: 2rem;
-        color: black;
+        color: whitesmoke;
         text-shadow: 2px 2px 5px rgba(255, 255, 0, 1);
         transition: cubic-bezier(0.68, -0.55, 0.265, 1.55);
         transition-duration: 7s;
@@ -83,85 +71,159 @@
     <br />
     <div
       style="
-        background-image: url(./form1.png);
-        text-align: center;
+        background:linear-gradient(120deg, #76b900, #ffffff, #76b900);
+        text-align: left;
         align-content: center;
-        background-repeat: round;
-        background-size: cover;
-      "
-    >
-      <br />
-      <br />
-      <h3
-        style="
-          text-align: center;
-          text-align: center;
-          font-family: 'Aladin', cursive;
-          font-size: 2.5rem;
-          color: #481f01;
-        "
-      >
-        Confession Form
-      </h3>
-      <br />
-      <br />
-      <h6 style="color: red; font-size: 0.8em;">
-        <em> (* indicates required field)</em>
-      </h6>
-      <br />
-      <form action="" method="">
-        <h5 style="font-size: 1em; font-weight: 700;">
-          Standard <em style="color: red;">*</em>
-        </h5>
-        <select name="standard" id="standard" required>
-          <option value="select">SELECT</option>
-          <option value="nur">NURSERY</option>
-          <option value="lkg">LKG</option>
-          <option value="ukg">UKG</option>
-          <option value="1">I</option>
-          <option value="2">II</option>
-          <option value="3">III</option>
-          <option value="4">IV</option>
-          <option value="5">V</option>
-          <option value="6">VI</option>
-          <option value="7">VII</option>
-          <option value="8">VIII</option>
-          <option value="9">IX</option>
-          <option value="10">X</option>
-          <option value="11">XI</option>
-          <option value="12">XII</option>
-          <option value="ex">EX-STUDENT</option>
-          <option value="out">PASSOUT</option>
-        </select>
-        <br />
-        <br />
-        <br />
-        <h5 style="font-size: 1em; font-weight: 700;">
-          Section <em style="color: red;">(For: Currently Pursuing)</em>
-        </h5>
-        <input type="radio" name="section" id="section" value="a" />A
-        <input type="radio" name="section" id="section" value="b" />B
-        <input type="radio" name="section" id="section" value="c" />C
-        <input type="radio" name="section" id="section" value="d" />D
-        <input type="radio" name="section" id="section" value="e" />E
-        <br />
-        <br />
-        <br />
-        <h5 style="font-size: 1em; font-weight: 700;">
-          On Year <em style="color: red;">*</em>
-        </h5>
+        
+        background-size:cover;border: 15px double black;margin: 20px 0; box-sizing: border-box;padding: 10px 5px;
+        ">
+        
+              
+              
+              
+             
+      <br>
 
-        <input type="number" name="year" id="year" required />
+      <form
+        id="form"
+        action=""
+        target="_self"
+        onsubmit="return postToGoogle();"
+        autocomplete="off"
+      >
+        <h3
+          style="
+            text-align: center;
+            font-family: 'Aladin', cursive;
+            font-size: 2.9rem;
+            color: #481f01;
+          "
+        >
+          Confession Form
+        </h3>
+        <br />
+        <br />
+        <h6 style="color: red; font-size: 1.3em; font-weight: 700;text-align: center;">
+          <em
+            style="
+              padding: 10px 5px;
+              margin: 20px 0;
+              display: inline-block;
+              border: 2px solid red;
+              box-sizing: border-box;
+            "
+          >
+            (*) indicates required field</em
+          >
+        </h6>
+
+      
+        <label style="font-size: 30px; font-weight: 700;">
+          &nbsp Standard <em style="color: red;">* </em>&nbsp</label>
+        <select
+          style="
+            width: 30%;
+            font-size: 20px;
+            padding: 8px 5px;
+            margin: 15px 0;
+            display: inline-block;
+            border: 2px solid black;
+            box-sizing: border-box;
+          "
+          name="entry.1823041239"
+          id="standard"
+          placeholder="select standard"
+          required
+        >
+          <option value="">select</option>
+          <option value="NURSERY">NURSERY</option>
+          <option value="LKG">LKG</option>
+          <option value="UKG">UKG</option>
+          <option value="I">I</option>
+          <option value="II">II</option>
+          <option value="III">III</option>
+          <option value="IV">IV</option>
+          <option value="V">V</option>
+          <option value="VI">VI</option>
+          <option value="VII">VII</option>
+          <option value="VIII">VIII</option>
+          <option value="IX">IX</option>
+          <option value="X">X</option>
+          <option value="XI">XI</option>
+          <option value="XII">XII</option>
+          <option value="EX-STUDENT">EX-STUDENT</option>
+          <option value="PASSOUT">PASSOUT</option>
+        </select>
+
+        <br />
+        <br />
+        
+        <label style="font-size: 30px; font-weight: 700;">
+          &nbsp Section &nbsp&nbsp&nbsp &nbsp &nbsp&nbsp</label>
+          <select style="
+                      width: 30%;
+                      font-size: 20px;
+                      padding: 8px 5px;
+                      margin: 15px 0;
+                      display: inline-block;
+                      border: 2px solid black;
+                      box-sizing: border-box;
+                    " name="entry.311118158" id="section" placeholder="section">
+            <option value>select</output>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="Dont Prefer">PREFER NOT TO SAY</option>
+          </select>
+          <em style="color: red; font-size: 20px; font-weight: 500;;"
+            ><br />&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFor: Currently Pursuing &#x2196</em
+          >
+        
+        
+
+        <br />
+        <br />
+  <br>
+        <label style="font-size: 30px; font-weight: 700;">
+         &nbsp On Year <em style="color: red;">*</em> &nbsp&nbsp&nbsp
+        </label>
+
+        <input
+          style="
+            padding: 8px 5px;
+            margin: 15px 0;
+            display: inline-block;
+            border: 2px solid black;
+            box-sizing: border-box;
+          "
+          type="text"
+          name="entry.1051615977"
+          id="year"
+          pattern="^\d{4}$"
+          placeholder="Ex:  2019"
+          required
+        />
         <br />
         <br />
         <br />
-        <h5 style="font-size: 1em; font-weight: 700;">
-          Your Confession <em style="color: red;">*</em>
-        </h5>
+        
+        <p style="font-size: 30px; font-weight: 700;">
+         &nbsp Your Confession <em style="color: red;">* &nbsp</em>
+        </p>
+        <div style="text-align: center;">
         <textarea
-          name="confession"
+          style="
+            padding: 1px 1px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 2px solid black;
+            box-sizing: border-box;text-align: center;
+          "
+          name="entry.980345016"
           id="message"
-          cols="50%"
+          cols="30"
           rows="20"
           placeholder="I want to confess that..."
           required
@@ -169,60 +231,107 @@
         <br />
         <br />
 
-        <!-- <input type="submit" class="btn btn-primary" id="confess" value="Confess" /> -->
-        <button type="button" id="confess" class="btn btn-primary">
-          Confess
-        </button>
+        <button
+          style="
+            font-size: 20px;
+            text-align: center;
+            background-color: black;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 30%;
+          "
+          id="send"
+          type="submit"
+          class="common_btn"
+        >
+          confess
+        </button></div>
       </form>
+
+      <h6
+        id="success-msg"
+        style="
+          color: #000000;
+          text-shadow: 3px -2px 5px rgb(0, 195, 255);
+          font-size: 3em;
+          padding: 10px 5px;
+          margin: 20px 0;
+          display: none;
+          border: 3px black;
+          box-sizing: border-box;
+        "
+      >
+        CONGRATS!!!<br /><br />
+        <em style="font-size: 30px;"
+          >Your Confession has been<br />
+          successfully recorded.</em
+        >
+      </h6>
+
+      <script>
+        function postToGoogle() {
+          var field1 = $("#standard option:selected").text();
+          var field2 = $("#section option:selected").text();
+          var field3 = $("#year").val();
+          var field4 = $("#message").val();
+
+          if (field1 == "") {
+            alert("Please select your standard");
+            document.getElementById("standard").focus();
+            return false;
+          }
+          if (field2 == "") {
+            alert("Please select your section");
+            document.getElementById("section").focus();
+            return false;
+          }
+          if (field3 == "" || field3.length > 4 || field3.length < 4) {
+            alert("Please enter correct year");
+            document.getElementById("year").focus();
+            return false;
+          }
+          if (field4 == "") {
+            alert("Please write your confession");
+            document.getElementById("message").focus();
+            return false;
+          }
+
+          $.ajax({
+            url:
+              "https://docs.google.com/forms/u/0/d/e/1FAIpQLSc9auOgn60s1PTu0hXvHBFsY0A4wK8j_9m58TZ9Pdqw1nROKw/formResponse",
+            data: {
+              "entry.1823041239": field1,
+              "entry.311118158": field2,
+              "entry.1051615977": field3,
+              "entry.980345016": field4,
+            },
+            type: "POST",
+            dataType: "xml",
+            success: function (d) {},
+            error: function (x, y, z) {
+              $("#success-msg").show();
+              $("#form").hide();
+            },
+          });
+          return false;
+        }
+      </script>
+
       <br />
     </div>
-
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-    <script>
-      $("#confess").click(function () {
-        var standard = $("#standard").val();
-        var section = $("#section").val();
-        var year = $("#year").val();
-        var confession = $("#message").val();
-
-        if (standard == "" || year == "" || confession == "") {
-          swal({
-            title: "ERROR!",
-            text: "You missed something or filled incorrectly!",
-            icon: "error",
-            button: "OK",
-          });
-        } else {
-          swal({
-            title: "WELL DONE!",
-            text: "You successfully submitted your confession",
-            icon: "success",
-          });
-        }
-      });
-    </script>
     <br />
     <br />
     <br />
     <br />
     <br />
     <br />
-    <p style="text-align: center;">Copyright &copy;2020. All Rights Reserved</p>
+    <br />
+    <br />
+    <p style="text-align: center; font-weight: 600;">
+      Copyright &copy;2020. All Rights Reserved
+    </p>
   </body>
 </html>
