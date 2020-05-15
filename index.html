@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <link href="https://fonts.googleapis.com/css2?family=Allerta+Stencil&display=swap" rel="stylesheet">
+    
+     <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&display=swap" rel="stylesheet">
  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Indie+Flower&display=swap" rel="stylesheet">
     <link
       href="https://fonts.googleapis.com/css2?family=Allan:wght@700&family=Fontdiner+Swanky&family=Homemade+Apple&family=Sunshiney&display=swap"
@@ -20,14 +21,8 @@
 
   <body
     style="
-      background: linear-gradient(
-        to bottom,
-        #000000,
-        #3a1d1f,
-        #6f362b,
-        #9f572b,
-        #c2831f,
-        #c59a0d
+      background-color: #011936;
+      
       );
     "
   >
@@ -71,7 +66,7 @@
     <div>
     <h5 style="font-family: 'Comfortaa', cursive;font-size: 2rem;color: #ffff66;
         text-shadow: 2px 2px 5px rgba(0, 255, 0, 1);">&nbspGuidelines :</h5>
-        <ul style="list-style-image: url('liststyle.png'); color:whitesmoke; font-size:1.6rem;font-family: 'Indie Flower', cursive;text-shadow: 2px 2px 5px rgba(127, 255, 0, 1);">
+        <ul style="list-style-image: url('liststyle.png'); color:whitesmoke; font-size:1.5rem;font-family: 'Indie Flower', cursive;">
             <li>Share your secret exciting stories of school.</li><br>
             <li>Confess your feelings about someone without letting them know about you.</li><br>
             <li>Pass-outs and Ex-students can share their experiences, moments and guidance too.</li><br>
@@ -80,8 +75,8 @@
             </ul>
             <br>
             <br>
-          <ul style="list-style-image: url('rockstyle.png'); color: #FFFF66; font-size:1.9rem;font-family: 'Allerta Stencil', sans-serif;text-shadow: 2px 2px 5px rgba(255, 0, 0, 1); ">
-              <li>BELDIH is a BOSS! & We Are Proud to be Beldihians! 🎓 <br><br>GO and CONFESS out! </li>
+          <ul style="list-style-image: url('rockstyle.png'); color:Yellow; font-size:2.4rem;font-family: 'Ceviche One', cursive;text-shadow: 2px 2px 5px rgba(255, 182, 193, 0);border-bottom: 5px double yellow; border-top: 5px double yellow;">
+              <li>BELDIH always Rocks!<br> Proud To BE A Beldihian.   <br><br>GO and CONFESS out! </li>
 </ul>
       </div>
     <br />
@@ -93,12 +88,11 @@
     <br />
     <div
       style="
-        background:linear-gradient(120deg, #76b900, #ffffff, #76b900);
+        background:linear-gradient(120deg, #feca1d, #ffffff, #fdbc00);
         text-align: left;
         align-content: center;
         
-        background-size:cover;border: 15px double black;margin: 20px 0; box-sizing: border-box;padding: 10px 5px;
-        border-radius: 30px; 
+        background-size:cover;border: 15px double black;margin: 20px 0; box-sizing: border-box;padding: 10px 5px;border-radius: 30px; 
         ">
         
               
@@ -158,14 +152,8 @@
           placeholder="select standard"
           required
         >
-          <option value="">select</option>
-          <option value="NURSERY">NURSERY</option>
-          <option value="LKG">LKG</option>
-          <option value="UKG">UKG</option>
-          <option value="I">I</option>
-          <option value="II">II</option>
-          <option value="III">III</option>
-          <option value="IV">IV</option>
+          <option value="">SELECT</option>
+         
           <option value="V">V</option>
           <option value="VI">VI</option>
           <option value="VII">VII</option>
@@ -192,7 +180,7 @@
                       border: 2px solid black;
                       box-sizing: border-box;
                     " name="entry.311118158" id="section" placeholder="section">
-            <option value>select</output>
+            <option value>SELECT</output>
             <option value="A">A</option>
             <option value="B">B</option>
             <option value="C">C</option>
@@ -268,11 +256,12 @@
             border: none;
             cursor: pointer;
             width: 30%;
-            border-radius: 10px; 
+            border-radius: 15px; 
           "
           id="send"
           type="submit"
           class="common_btn"
+          onclick="myfunction()"
         >
           confess
         </button></div>
@@ -298,6 +287,9 @@
         >
       </h6>
 
+
+     
+      
       <script>
         function postToGoogle() {
           var field1 = $("#standard option:selected").text();
@@ -357,7 +349,7 @@
     <br />
     <br />
     <br />
-    <p style="text-align: center; font-weight: 600;">
+    <p style="text-align: center; font-weight: 600;color: white; ">
       Copyright &copy;2020. All Rights Reserved
     </p>
   </body>
